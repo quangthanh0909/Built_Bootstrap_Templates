@@ -14,13 +14,186 @@
     <title>Checkout</title>
   </head>
   <body>
-     
+      <header class="my-4">
+          <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-10">
+                  <i class="fab fa-bootstrap d-block mb-2"></i>
+                  <h3>Checkout form</h3>
+                  <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+                </div>
+            </div>
+          </div>   
+      </header>
+      <main>
+            <div class="container">
+              <form action="">
+                <div class="row">
+                    <div class="billing-address col-12 col-md-8 order-2 order-md-1">
+                          <fieldset> 
+                             <legend>Billing address </legend>
+                              <div class="form-group row">
+                                  <div class="col-md-6">
+                                      <label for="firstname">First name</label>
+                                      <input class="form-control"type="text" id="firstname">
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label for="lastname">Last name</label>
+                                      <input class="form-control"type="text" id="lastname">
+                                  </div>
+                              </div> <!--First Name and Last Name-->
+                              <div class="form-group">
+                                <label for="username">Username</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1">@</span>
+                                      </div>
+                                      <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" id="username">
+                                    </div>
+                              </div> <!-- Username-->
+
+                              <div class="form-group">
+                                    <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                                    <input class="form-control"type="text" id="email" placeholder="you@example.com">
+                              </div> <!-- Email-->
+                              <div class="form-group">
+                                  <label for="Address">Address </label>
+                                  <input class="form-control"type="text" id="Address" placeholder="1234 Main st">
+                              </div> <!-- Address-->
+                              <div class="form-group">
+                                  <label for="Address2">Address 2 <span class="text-muted">(Optional)</span></label>
+                                  <input class="form-control"type="text" id="Address2" placeholder="Apartment or Suite">
+                              </div> <!-- Address2-->
+                              <div class="form-group row">
+                                    <div class="col-12 col-md-6">
+                                          <label for="countrylist">Country</label>
+                                          <select class="form-control" name="country" id="countrylist">
+                                              <option value="">Choose..</option>
+                                              <option value="">United State</option>
+                                          </select>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <label for="statelist">State</label>
+                                        <select class="form-control" name="state" id="statelist">
+                                            <option value="">Choose..</option>
+                                            <option value="">California</option>
+                                        </select>  
+                                    </div>
+                                    <div class="col-12 col-md-2">
+                                        <label for="zipcode">Zip</label>
+                                        <input type="text" class="form-control" id="zipcode">
+                                    </div>
+                              </div> <!-- County State Zip-->
+                              <hr>
+                              <div class="custom-control custom-checkbox">
+                                  <input class="custom-control-input" type="checkbox" name="" id="shippingadd">
+                                  <label class="custom-control-label"for="shippingadd">Shipping address is the same as my billing address</label>
+                                  
+                              </div> <!--Shipping Address-->
+                              <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" id="saveInfo" class="custom-control-input">
+                                  <label class="custom-control-label" for="saveInfo">Save this information for next time</label> 
+                              </div> <!--Save information-->
+                              <hr>
+                              <div class="PaymentInformation my-2">
+                                    <h4>Payment</h4>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" id="Credicard" name="paymentMethod" value="creditcard">
+                                        <label class="custom-control-label" for="Credicard">Credit Card</label>
+                                    </div> 
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" id="Debitcard" name="paymentMethod" value="Debitcard">
+                                        <label class="custom-control-label" for="Debitcard">Debit Card</label>
+                                    </div> 
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" id="Paypalcard" name="paymentMethod" value="Paypalcard">
+                                        <label class="custom-control-label" for="Paypalcard">Paypal</label>
+                                    </div> 
+                              </div>
+                              <div class="form-group row">
+                                    <div class="col-12 col-md-6">
+                                        <label for="nameOnCard">Name on card</label>
+                                        <input type="text" id="nameOnCard" class="form-control">
+                                        <small class="text-muted">Full name as displayed on card</small>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="creditCardNum">Credit card number</label>
+                                        <input type="text" id="creditCardNum" class="form-control">
+                                    </div>
+                                   
+                              </div> <!-- Name on card and Credit card number -->
+                              <div class="form-group row">
+                                  <div class="col-md-3">
+                                      <label for="Expire">Expiration</label>
+                                      <input type="text" id="Expire" class="form-control">
+                                  </div>
+                                  <div class="col-md-3">
+                                      <label for="CVV">CVV</label>
+                                      <input type="text" id="CVV" class="form-control">
+                                  </div>
+                              </div>
+                              <button class="btn btn-primary btn-block">Continue to checkout</button>
+                          </fieldset>       
+                    </div> <!-- End Billing address-->
+                    <div class="your-cart col-12 col-md-4 order-1 order-md-2">
+                          <h4 class="d-flex justify-content-between">
+                            <span>Your cart</span>
+                            <span class="badge badge-secondary badge-pill">3</span>
+                          </h4>
+                          <ul class="list-group">
+                              <li class="list-group-item d-flex justify-content-between">
+                                  <div>
+                                      <h6>Product name</h6>
+                                      <span class="text-muted small">Brief description </span>
+                                  </div>
+                                  <span>$12</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between">
+                                  <div>
+                                      <h6>Second product</h6>
+                                      <span class="text-muted small">Brief description </span>
+                                  </div>
+                                  <span>$8</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between">
+                                  <div>
+                                      <h6>Third item</h6>
+                                      <span class="text-muted small">Brief description </span>
+                                  </div>
+                                  <span>$5</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between list-group-item-white">
+                                  <div class="text-success">
+                                      <h6>Promo code</h6>
+                                      <span class="small">EXAMPLECODE
+                                        </span>
+                                  </div>
+                                  <span>-$5</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between list-group-item-white">
+                                      <h6>Total (USD)</h6>
+                                  <span>$20</span>
+                              </li>
+
+                          </ul>
+                          <div class="input-group my-3">
+                              <input type="text" class="form-control" placeholder="Promo code" aria-label="Promo code" aria-describedby="Promocode">
+                              <div class="input-group-append">
+                                <button class="input-group-text" id="Promocode">Redeem</button>
+                              </div>
+                            </div>
+                    </div>
+              </div>
+            </form>
+            </div>
+      </main>
       <footer>
           <div class="container-fluid my-4 bg-light py-4">
             <div class="row">
               <div class="col-md-3">
                   <i class="fab fa-bootstrap d-block"></i>
                   <small class="text-muted">@ 2017-2019</small>
+                  <h6>Email: quangthanh0909@gmail.com</h6>
               </div>  <!-- Bootstrap logo -->
               <div class="col-sm-6 col-md-3">
                   <h3>Features</h3>
